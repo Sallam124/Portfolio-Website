@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Ahmed Sallam</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Ahmed Sallam</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/picture1.jpeg" alt="Ahmed Sallam profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Ahmed Sallam</h1>
+        <p class="section__text__p2">Frontend Developer</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/Resume.pdf')"
+          >
+            Download CV
+          </button>
+          <button
+            class="btn btn-color-1"
+            onclick="window.location.href='mailto:sallam.a.y.m@gmail.com'"
+          >
+            Contact Info
+          </button>
+
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/ahmed-sallam-15522a1a5/'"
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/Sallam124'"
+          />
+        </div>
+      </div>
+
+    </section>
+    <div class="height-gap"></div>
+
+    <section id="about">
+      <div class="padding">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        
+        <div class="section__pic-container">
+          <img
+            src="./assets/picture2.png"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+
+              <h3>Experience</h3>
+
+              <div class="section-header">
+
+              </div>
+              <ul>
+                <li><strong>Coding Instructor - Codex Coding Camp (Jun 2024 - Jul 2024)</strong><br />
+                  Collaborated with a diverse team, including graduates from Harvard and MIU, to develop a Python course using Turtle graphics and game-based learning to promote problem-solving skills                </li>
+              </ul>
+
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p>B.Sc. Bachelor's Degree in Computer Science</p>
+              <p>Coventry University, New Administrative Capital, Egypt</p>
+              <p>Graduated: 2026</p>
+
+            </div>
+          </div>
+
+          <div class="text-container">
+          <div class="height-gap3"></div>
+
+            <p>
+              My name is Ahmed Sallam, and I am a highly motivated and dedicated computer science student with a strong passion for continuous learning and problem-solving. When I commit to a subject or project, I fully immerse myself—often working tirelessly to achieve exceptional deliverables. I enjoy collaborating with talented and driven individuals, thriving in team environments where diverse skills and ideas come together to create impactful outcomes.
+
+              I take great pride in the quality of my work and ensure that everything associated with me meets high standards. Adapting to new teams, programming languages, and technologies comes naturally to me. I am a quick and resilient learner, comfortable grasping new concepts and applying them effectively.
+
+              Above all, I am driven by curiosity and a commitment to personal and professional growth, aiming to contribute meaningfully to any project or team I join.
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='#experience'"
+
+        
+      />
+          <div class="height-gap2"></div>
+
+    </section>
+
+    <section id="experience">
+      
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+      
+      <div class="experience-details-container">
+        <div class="about-containers">
+
+          <!-- Frontend -->
+          <div class="details-container">
+            <h2 class="experience-sub-title">Frontend Development</h2>
+            <div class="article-container">
+              <article>
+                <img src="./assets/checkmark.png" alt="icon" class="icon" />
+                <div><h3>HTML</h3><p>Intermediate</p></div>
+              </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="icon" class="icon" />
+                <div><h3>CSS</h3><p>Intermediate</p></div>
+              </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="icon" class="icon" />
+                <div><h3>JavaScript</h3><p>Intermediate</p></div>
+              </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="icon" class="icon" />
+                <div><h3>Dart</h3><p>Intermediate</p></div>
+              </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="icon" class="icon" />
+                <div><h3>C#</h3><p>Basic</p></div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Backend & Tools -->
+          <div class="details-container">
+            <h2 class="experience-sub-title">Backend & Developer Tools</h2>
+            <div class="article-container">
+              <article>
+                <img src="./assets/checkmark.png" alt="icon" class="icon" />
+                <div><h3>C++</h3><p>Experienced</p></div> 
+              </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="icon" class="icon" />
+                <div><h3>C</h3><p>Intermediate</p></div>
+              </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="icon" class="icon" />
+                <div><h3>Python</h3><p>Experienced</p></div>
+              </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="icon" class="icon" />
+                <div><h3>R</h3><p>Basic</p></div>
+              </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="icon" class="icon" />
+                <div><h3>MongoDB</h3><p>Experienced</p></div>
+              </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="icon" class="icon" />
+                <div><h3>SQL Server</h3><p>Experienced</p></div>
+              </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="icon" class="icon" />
+                <div><h3>SQLite</h3><p>Intermediate</p></div>
+              </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="icon" class="icon" />
+                <div><h3>Firebase</h3><p>Intermediate</p></div>
+              </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="icon" class="icon" />
+                <div><h3>GitHub</h3><p>Experienced</p></div>
+              </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="icon" class="icon" />
+                <div><h3>Azure DevOps</h3><p>Intermediate</p></div>
+              </article>
+              
+              <article>
+                <img src="./assets/checkmark.png" alt="icon" class="icon" />
+                <div><h3>AWS</h3><p>Basic</p></div>
+              </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="icon" class="icon" />
+                <div><h3>Jupyter Notebook</h3><p>Experienced</p></div>
+              </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="icon" class="icon" />
+                <div><h3>Streamlit</h3><p>Experienced</p></div>
+              </article>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+          <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow2" onclick="location.href='#projects'" />
+      
+    </section>
+
+
+
+
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="project-wrapper">
+          <div class="about-containers">
+            <div class="details-container color-container">
+              <div class="article-container">
+                <img
+                  src="./assets/Poster project-1 .jpeg"
+                  alt="Project 1"
+                  class="project-img"
+                />
+              </div>
+              <h2 class="experience-sub-title project-title">Project One</h2>
+              <div class="btn-container">
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="location.href='https://github.com/Sallam124/viva_journal.git'"
+                >
+                  Github
+                </button>
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="location.href='https://elsewedyedu1-my.sharepoint.com/:v:/g/personal/as2200588_tkh_edu_eg/ESofDiuzo_1Eo_oRBmGqLo0BPTb0_xotpmUEzqyjbj62cg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=eugrlU'"
+                >
+                Watch Demo
+                </button>
+              </div>
+            </div>
+            <div class="details-container color-container">
+              <div class="article-container">
+                <img
+                  src="./assets/Poster project-2.png"
+                  alt="Project 2"
+                  class="project-img"
+                />
+              </div>
+              <h2 class="experience-sub-title project-title">Project Two</h2>
+              <div class="btn-container">
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="location.href='https://github.com/Sallam124/POS_System.git'"
+                >
+                  Github
+                </button>
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="openGallery()"
+                >
+                  View Screenshots
+                </button>
+
+              </div>
+            </div>
+            <div class="details-container color-container">
+              <div class="article-container">
+                <img
+                  src="./assets/Poster project-3.png"
+                  alt="Project 3"
+                  class="project-img"
+                />
+              </div>
+              <h2 class="experience-sub-title project-title">Project Three</h2>
+              <div class="btn-container">
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="location.href='https://github.com/Sallam124/Data_Science_Analysis_Project.git'"
+                >
+                  Github
+                </button>
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="location.href='https://sallam124-data-science-project-gaming-analytics-voelnv.streamlit.app/'"
+                >
+                  Live Demo
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+                  <img
+      src="./assets/arrow.png"
+      alt="Arrow icon"
+      class="icon arrow"
+      onclick="location.href='#contact'"
+    />
+    </section>
+    
+    
+
+
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:examplemail@gmail.com">sallam.a.y.m@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com/in/ahmed-sallam-15522a1a5/">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2025 Ahmed Sallam. All Rights Reserved.</p>
+    </footer>
+      <div id="screenshotModal" class="modal">
+    <span class="close" onclick="closeGallery()">&times;</span>
+    <div class="modal-content">
+      <img src="./assets/Screenshot1.png" class="modal-img" />
+      <img src="./assets/Screenshot.png" class="modal-img" />
+      <img src="./assets/Screenshot2.png" class="modal-img" />
+      <img src="./assets/Screenshot3.png" class="modal-img" />
+    </div>
+  </div>
+    <script src="script.js"></script>
+  </body>
+</html>
