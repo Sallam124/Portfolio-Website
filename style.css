@@ -37,6 +37,8 @@ nav {
   justify-content: space-around;
   align-items: center;
   height: 17vh;
+  opacity: 0;
+  animation: slideDown 1s forwards;
 }
 
 .nav-links {
@@ -154,6 +156,13 @@ section {
   margin: 0 10rem;
   box-sizing: border-box;
   min-height: fit-content;
+  opacity: 0;
+  transition: opacity 0.7s, transform 0.7s;
+}
+
+section.visible {
+  opacity: 1;
+  transform: none;
 }
 
 .section-container {
@@ -202,8 +211,14 @@ section {
   border-radius: 50%;
   flex-shrink: 0;
   align-self: center;
+  transition: transform 0.7s cubic-bezier(.25,.8,.25,1), box-shadow 0.7s;
 }
 
+.section__pic-container img.animated {
+  transform: scale(1.05) rotate(-2deg);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  animation: glow 2s infinite alternate;
+}
 
 .section__text {
   align-self: auto;
@@ -279,6 +294,19 @@ section {
   padding: 1rem;
   width: 8rem;
   border-radius: 2rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+  transform: scale(1.07) translateY(-2px);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+}
+
+.btn:active {
+  transform: scale(0.97);
 }
 
 .btn-color-1,
@@ -347,11 +375,13 @@ section {
   position: absolute;
   right: -2rem;
   bottom: .5rem;
+  animation: bounce 1.2s infinite;
 }
 .arrow2 {
   position: absolute;
   right: -2rem;
   bottom: 12.5rem;
+  animation: bounce 1.2s infinite;
 }
 
 
@@ -365,11 +395,17 @@ section {
   text-align: center;
   max-height: 220px;
   overflow-y: auto;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 #projects .details-container {
   background: none;
   border: none;
+}
+
+.details-container.color-container:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
 }
 
 .section-container {
@@ -530,6 +566,12 @@ html {
 footer {
   height: 26vh;
   margin: 0 1rem;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+footer.visible {
+  opacity: 1;
 }
 
 footer p {
@@ -545,6 +587,10 @@ footer p {
   height: 100%;
   background-color: rgba(0,0,0,0.9);
   overflow-y: auto;
+  transition: opacity 0.4s;
+}
+.modal[style*='display: block'] {
+  animation: fadeIn 0.5s;
 }
 .modal-content {
   display: flex;
@@ -566,4 +612,103 @@ footer p {
   font-size: 2rem;
   cursor: pointer;
 }
+
+/* --- Animations --- */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-40px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+@keyframes glow {
+  0% { box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.7); }
+  100% { box-shadow: 0 0 30px 10px rgba(0, 123, 255, 0); }
+}
+.fade-in { opacity: 0; animation: fadeIn 1s forwards; }
+.slide-down { opacity: 0; animation: slideDown 1s forwards; }
+.bounce { animation: bounce 1.2s infinite; }
+.glow {
+  animation: glow 2s infinite alternate;
+}
+
+/* --- Section Animation Utility --- */
+section { opacity: 0; transition: opacity 0.7s, transform 0.7s; }
+section.visible { opacity: 1; transform: none; }
+
+/* --- Profile Image Animation --- */
+.section__pic-container img {
+  transition: transform 0.7s cubic-bezier(.25,.8,.25,1), box-shadow 0.7s;
+}
+.section__pic-container img.animated {
+  transform: scale(1.05) rotate(-2deg);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  animation: glow 2s infinite alternate;
+}
+
+/* --- Button Animations --- */
+.btn:hover {
+  transform: scale(1.07) translateY(-2px);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+}
+.btn:active {
+  transform: scale(0.97);
+}
+
+/* --- Project Card Hover Animation (no 3D tilt, buttons unaffected) --- */
+.details-container.color-container.project-hovered {
+  transform: translateY(-12px) scale(1.045);
+  box-shadow: 0 12px 36px 0 rgba(0,0,0,0.22);
+  z-index: 2;
+}
+.details-container.color-container.project-hovered .btn-container {
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* --- Arrow Animation --- */
+.arrow, .arrow2 {
+  animation: bounce 1.2s infinite;
+}
+
+/* --- Modal Animation --- */
+.modal {
+  transition: opacity 0.4s;
+}
+.modal[style*='display: block'] {
+  animation: fadeIn 0.5s;
+}
+
+/* --- Footer Animation --- */
+footer {
+  opacity: 0;
+  transition: opacity 1s;
+}
+footer.visible {
+  opacity: 1;
+}
+
+/* --- 3D Tilt Card Effect --- */
+.details-container.color-container {
+  will-change: transform;
+  perspective: 600px;
+}
+.details-container.color-container.tilted {
+  transition: transform 0.15s cubic-bezier(.25,.8,.25,1), box-shadow 0.15s;
+}
+
+/* --- Particles Canvas --- */
+#particles-bg {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+#profile { position: relative; z-index: 1; }
+.section__text, .section__pic-container { position: relative; z-index: 2; }
 
