@@ -1,9 +1,4 @@
-import {
-  FaGithub,
-  FaInstagram,
-  FaLinkedinIn,
-  FaXTwitter,
-} from "react-icons/fa6";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import "./styles/SocialIcons.css";
 import { TbNotes } from "react-icons/tb";
 import { useEffect } from "react";
@@ -57,18 +52,18 @@ const SocialIcons = () => {
     <div className="icons-section">
       <div className="social-icons" data-cursor="icons" id="social">
         <span>
-          <a href="https://github.com/sallam124" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub">
+          <a href="https://github.com/Sallam124" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub">
             <FaGithub />
           </a>
         </span>
         <span>
           <a href="https://www.linkedin.com/in/ahmed-sallam-15522a1a5/" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn">
-            <FaLinkedinIn />
+            <FaLinkedin />
           </a>
         </span>
         <span>
-          <a href="https://www.instagram.com/ahmed_youssef_sallam/" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram">
-            <FaInstagram />
+          <a href="mailto:sallam.a.y.m@gmail.com" target="_blank" rel="noopener" title="Email" aria-label="Email">
+            <TbNotes />
           </a>
         </span>
       </div>

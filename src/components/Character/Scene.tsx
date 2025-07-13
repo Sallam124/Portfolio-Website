@@ -70,7 +70,7 @@ const Scene = () => {
             }, 2500);
           });
           window.addEventListener("resize", () =>
-            handleResize(renderer, camera, canvasDiv, character)
+            handleResize(renderer, camera, canvasDiv as React.RefObject<HTMLDivElement>, character)
           );
         }
       });
@@ -131,7 +131,7 @@ const Scene = () => {
         scene.clear();
         renderer.dispose();
         window.removeEventListener("resize", () =>
-          handleResize(renderer, camera, canvasDiv, character!)
+          handleResize(renderer, camera, canvasDiv as React.RefObject<HTMLDivElement>, character!)
         );
         if (canvasDiv.current) {
           canvasDiv.current.removeChild(renderer.domElement);
