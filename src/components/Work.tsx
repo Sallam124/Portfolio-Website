@@ -28,8 +28,8 @@ const Work = () => {
   const workFlex = document.querySelector('.work-flex');
   const viewportWidth = window.innerWidth;
   let scrollWidth = workFlex ? workFlex.scrollWidth : translateX;
-  // Use a much smaller divisor to significantly increase scroll duration
-  let pinEnd = scrollWidth / 50; // Reduced to 50 for much longer horizontal scroll
+  // Use a larger divisor to make the scroll faster
+  let pinEnd = scrollWidth / 200; // Increased from 100 to 200 for faster horizontal scroll
 
   let timeline = gsap.timeline({
     scrollTrigger: {
