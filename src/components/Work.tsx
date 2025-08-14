@@ -26,7 +26,6 @@ const Work = () => {
 
   // Calculate the total scrollable width for pinning
   const workFlex = document.querySelector('.work-flex');
-  const viewportWidth = window.innerWidth;
   let scrollWidth = workFlex ? workFlex.scrollWidth : translateX;
   // Use a larger divisor to make the scroll faster
   let pinEnd = scrollWidth / 200; // Increased from 100 to 200 for faster horizontal scroll
